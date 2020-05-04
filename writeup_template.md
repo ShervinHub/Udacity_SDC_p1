@@ -17,6 +17,8 @@ The goals / steps of this project are the following:
 
 [image1]: ./test_images_output/solidWhiteCurve.jpg 
 
+<img src="test_images_output/solidWhiteCurve.jpg " width="480" alt="Combined Image" />
+
 ---
 
 ### Reflection

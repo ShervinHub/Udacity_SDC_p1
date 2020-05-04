@@ -44,13 +44,15 @@ Results on the provided still images:
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-When there is only one line for each side of the lane returned by hough transfor, then there is an infinite number of best fitting lines (I know in a computer there is no such a thing as infinite - in theory I mean). Similar when no lines returned at all (due to bad tunning, etc.). 
+When there is only one line for each side of the lane returned by hough transform, there is an infinite number of best fitting lines (I know in a computer there is no such a thing as infinite - in theory I mean). 
 
-It could be slower than avergaing the lines(not sure) but probably more robust.
+When no lines returned at all (due to bad tunning, etc.) we'll have no points to fit to. 
+
+Regression could be slower than avergaing the lines(not sure) but probably more robust.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to add a scene categorization code every few second to determine whether the car moving in a straight line, the position of the car on the road, etc, and then based on each follow a different strategy, or tuning of parameters.
+A possible improvement would be to add a scene categorization code that checks every few second to determine whether the car moving in a straight line, find the position of the car on the road, etc, and then for each category follow a different strategy, or a different set of parameters.
 
 Another potential improvement could be to allow curved lane lines, though with a little higher overload, it can produce better results.

@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+
 
 ---
 
@@ -23,25 +23,24 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+My pipeline consisted of several steps. Grayscale the image, blur it using gaussian blur, binarize using canny and hough transform to find the lines and categorize them to left and right side lines base on slope. Then get the middle of each line in each group and find the best fitting lines that go through all of the points (regression), and draw these lines. 
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+I did not modify draw_lines. Instead added a helper function avg_lines() to categorize the lines, and fit the best line.
 
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
+Results on the provided still images:
 
-![alt text][image1]
-
+[image1]: ./test_images_output/solidWhiteCurve.jpg 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
+When there is only one line for each side of the lane returned by hough transfor, then there is an infinite number of best fitting lines (I know in a computer there is no such a thing as infinite - in theory I mean). Similar when no lines returned at all (due to bad tunning, etc.). 
 
-Another shortcoming could be ...
+It could be slower than avergaing the lines(not sure) but probably more robust.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+A possible improvement would be to add a scene categorization code every few second to determine whether the car moving in a straight line, the position of the car on the road, etc, and then based on each follow a different strategy, or tuning of parameters.
 
-Another potential improvement could be to ...
+Another potential improvement could be to allow curved lane lines, though with a little higher overload, it can produce better results.

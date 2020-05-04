@@ -13,11 +13,7 @@ The goals / steps of this project are the following:
 * Reflect on your work in a written report
 
 
-[//]: # (Image References)
 
-[image1]: ./test_images_output/solidWhiteCurve.jpg 
-
-<img src="test_images_output/solidWhiteCurve.jpg " width="480" alt="Combined Image" />
 
 ---
 
@@ -30,6 +26,18 @@ My pipeline consisted of several steps. Grayscale the image, blur it using gauss
 I did not modify draw_lines. Instead added a helper function avg_lines() to categorize the lines, and fit the best line.
 
 Results on the provided still images:
+
+<img src="test_images_output/solidWhiteCurve.jpg " width="480" alt="Combined Image" />
+
+<img src="test_images_output/solidWhiteRight.jpg " width="480" alt="Combined Image" />
+
+<img src="test_images_output/solidYellowCurve.jpg " width="480" alt="Combined Image" />
+
+<img src="test_images_output/solidYellowCurve2.jpg " width="480" alt="Combined Image" />
+
+<img src="test_images_output/solidYellowLeft.jpg " width="480" alt="Combined Image" />
+
+<img src="test_images_output/whiteCarLaneSwitch.jpg " width="480" alt="Combined Image" />
 
 
 

@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-
+[image1]: ./test_images_output/solidWhiteCurve.jpg 
 
 ---
 
@@ -29,7 +29,7 @@ I did not modify draw_lines. Instead added a helper function avg_lines() to cate
 
 Results on the provided still images:
 
-[image1]: ./test_images_output/solidWhiteCurve.jpg 
+
 
 ### 2. Identify potential shortcomings with your current pipeline
 
